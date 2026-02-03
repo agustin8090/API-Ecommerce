@@ -32,7 +32,7 @@ public DateTime? UpdateDate { get; set; }= null;
 //Relacion con el modelo Category
 
 public int CategoryId { get; set; }
-[ForeignKey("Id")]
+[ForeignKey("CategoryId")]
 
 public  required Category Category { get; set; }
 }

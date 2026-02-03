@@ -147,3 +147,4 @@ C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce\obj\Debug\net8.0\ApiEcom
 C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce\obj\Debug\net8.0\ref\ApiEcommerce.dll
 C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce\obj\Debug\net8.0\ApiEcommerce.sourcelink.json
