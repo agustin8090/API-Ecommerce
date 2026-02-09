@@ -6,6 +6,7 @@ using System.Text;
 using ApiEcommerce.Models;
 using ApiEcommerce.Models.DTOs;
 using ApiEcommerce.Repository.IRepository;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 namespace ApiEcommerce.Repository;
@@ -31,9 +32,9 @@ public class UserRepository : IUserRepository
         return _db.Users.OrderBy(u=> u.Username).ToList();
     }
 
-    public bool IsUniqueUser(string username)
+    public async Task<bool> IsUniqueUser(string username)
     {
-        return !_db.Users.Any(u => u.Username.ToLower().Trim() == username.ToLower().Trim());
+        return ! await _db.Users.AnyAsync(u => u.Username.ToLower().Trim() == username.ToLower().Trim());
     }
 
     public async Task<UserLoginResponseDto> Login(UserLoginDto userLogindto)

@@ -19,7 +19,7 @@ builder.Services.AddScoped<IProductRepository,ProductRepository>();
 builder.Services.AddScoped<IUserRepository,UserRepository>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
-var secretKey=builder.Configuration.GetValue<string>("appsettings:SecretKey");
+var secretKey=builder.Configuration.GetValue<string>("Apisettings:SecretKey");
 
 if(string.IsNullOrEmpty(secretKey))
 {
@@ -42,8 +42,7 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = true,
         
     };
-    options.Authority = "http://localhost:8080/realms/master-realm";
-    options.Audience = "ecommerce-api";
+    
 });
 
 
@@ -71,6 +70,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors(PolicyNames.AllowSpecificOrigin);
+
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 app.MapControllers();
