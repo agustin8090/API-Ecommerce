@@ -1,0 +1,232 @@
+{
+  "info": {
+    "_postman_id": "69a41c44-0a7e-4952-970f-c7d5a0a47120",
+    "name": "API-Ecommerce",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51580189",
+    "_collection_link": "https://go.postman.co/collection/51580189-69a41c44-0a7e-4952-970f-c7d5a0a47120?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Categoria",
+      "item": [
+        {
+          "name": "Listado de Categorias",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5248/api/Categories",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5248",
+              "path": [
+                "api",
+                "Categories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener una Categoria",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5248/api/Categories/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5248",
+              "path": [
+                "api",
+                "Categories",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear una categoria",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIwMDMiLCJ1c2VybmFtZSI6ImFndTEyMyIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTc3MDgxMDUzNSwiZXhwIjoxNzcwODE3NzM1LCJpYXQiOjE3NzA4MTA1MzV9.1z7g8-dl7wfeQch1dDHF9fqxk9Bh3vTOHWkC-BmHtX4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Tecnologia\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5248/api/Categories/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5248",
+              "path": [
+                "api",
+                "Categories",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Borrar una categoria",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIwMDMiLCJ1c2VybmFtZSI6ImFndTEyMyIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTc3MDgxMDUzNSwiZXhwIjoxNzcwODE3NzM1LCJpYXQiOjE3NzA4MTA1MzV9.1z7g8-dl7wfeQch1dDHF9fqxk9Bh3vTOHWkC-BmHtX4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5248/api/Categories/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5248",
+              "path": [
+                "api",
+                "Categories",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar una categoria",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIwMDMiLCJ1c2VybmFtZSI6ImFndTEyMyIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTc3MDgxMDUzNSwiZXhwIjoxNzcwODE3NzM1LCJpYXQiOjE3NzA4MTA1MzV9.1z7g8-dl7wfeQch1dDHF9fqxk9Bh3vTOHWkC-BmHtX4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Tecnología\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5248/api/Categories/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5248",
+              "path": [
+                "api",
+                "Categories",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Usuario",
+      "item": [
+        {
+          "name": "Creacion Usuario",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"agu123\",\r\n  \"name\": \"agustin gonzalez\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"Admin\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5248/api/Users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5248",
+              "path": [
+                "api",
+                "Users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login usuario",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"agu123\",\r\n  \"password\": \"123456\"\r\n  \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5248/api/Users/Login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5248",
+              "path": [
+                "api",
+                "Users",
+                "Login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
