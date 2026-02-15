@@ -59,7 +59,7 @@ public class UserRepository : IUserRepository
             };
         }
 
-        var user = _db.AplicationUsers.FirstOrDefault<AplicationUser>(u => u.UserName != null && u.UserName.ToLower().Trim() == userLogindto.Username.ToLower().Trim());
+       var user = await _userManager.FindByNameAsync(userLogindto.Username);
         if (user == null)
         {
             return new UserLoginResponseDto()
