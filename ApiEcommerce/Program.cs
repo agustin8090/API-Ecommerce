@@ -9,7 +9,6 @@ using Asp.Versioning;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -39,8 +38,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddScoped<ICategoryRepository,CategoryRepository>();
 builder.Services.AddScoped<IProductRepository,ProductRepository>();
 builder.Services.AddScoped<IUserRepository,UserRepository>();
-builder.Services.AddAutoMapper(typeof(Program).Assembly);
-
+ 
+ // Registrar configuraciones de Mapster
+ ApiEcommerce.Mapping.ProductMappingConfig.RegisterProductMappings();
+ ApiEcommerce.Mapping.CategoryMappingConfig.RegisterCategoryMappings();
+ ApiEcommerce.Mapping.UserMappingConfig.RegisterUserMappings();
 
 builder.Services.AddIdentity<AplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()

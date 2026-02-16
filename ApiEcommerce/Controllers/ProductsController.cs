@@ -1,7 +1,7 @@
 using ApiEcommerce.Repository.IRepository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using AutoMapper;
+using Mapster;
 using ApiEcommerce.Models.DTOs;
 using ApiEcommerce.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -21,14 +21,12 @@ namespace ApiEcommerce.Controllers
     {
         private readonly IProductRepository _productRepository;
         private readonly ICategoryRepository _categoryRepository;
-        private readonly IMapper _mapper;
 
-        public ProductsController(IProductRepository productRepository,ICategoryRepository categoryRepository, IMapper mapper)
+
+        public ProductsController(IProductRepository productRepository, ICategoryRepository categoryRepository)
         {
-            _productRepository= productRepository;
-            _categoryRepository= categoryRepository;
-
-            _mapper= mapper;
+            _productRepository = productRepository;
+            _categoryRepository = categoryRepository;
         }
         [AllowAnonymous]
         [HttpGet]
@@ -38,9 +36,7 @@ namespace ApiEcommerce.Controllers
         public IActionResult GetProducts()
         {
             var products = _productRepository.GetProducts();
-            var productsDto= _mapper.Map<List<ProductDto>>(products);
-
-            
+            var productsDto = products.Adapt<List<ProductDto>>();
             return Ok(productsDto);
         }
 
@@ -54,13 +50,12 @@ namespace ApiEcommerce.Controllers
         public IActionResult GetProduct(int id)
         {
             var product = _productRepository.GetProduct(id);
-            if( product== null)
+            if (product == null)
             {
-                
                 return NotFound($"El producto con el id {id} no existe");
             }
 
-            var productDto= _mapper.Map<ProductDto>(product);
+            var productDto = product.Adapt<ProductDto>();
             return Ok(productDto);
             
 
@@ -93,7 +88,7 @@ namespace ApiEcommerce.Controllers
             var products = _productRepository.GetProductsInPages(pageNumber, pageSize);
 
 
-            var productDto= _mapper.Map<List<ProductDto>>(products);
+            var productDto= products.Adapt<List<ProductDto>>();
             var paginationResponse= new PaginationResponse<ProductDto>
             {
                 PageNumber= pageNumber,
@@ -133,7 +128,7 @@ namespace ApiEcommerce.Controllers
                 return BadRequest(ModelState);
             }
 
-            var product= _mapper.Map<Product>(createProductDto);
+            var product= createProductDto.Adapt<Product>();
 
             if(!_productRepository.CreateProduct(product))
             {
@@ -141,7 +136,7 @@ namespace ApiEcommerce.Controllers
                 return StatusCode(500, ModelState);
             }
             var createdProduct= _productRepository.GetProduct(product.Id);
-            var productDto= _mapper.Map<ProductDto>(createdProduct);
+            var productDto= createdProduct.Adapt<ProductDto>();
 
             return CreatedAtRoute("GetProduct", new {id=product.Id}, product);
 
@@ -162,7 +157,7 @@ namespace ApiEcommerce.Controllers
                 return NotFound($"Los productos con la categoria Id: {categoryId} no existen");
             }
 
-            var productsDto= _mapper.Map<List<ProductDto>>(products);
+            var productsDto= products.Adapt<List<ProductDto>>();
             return Ok(productsDto);
             
 
@@ -223,7 +218,7 @@ namespace ApiEcommerce.Controllers
                 return BadRequest(ModelState);
             }
 
-            var product= _mapper.Map<Product>(updateProductDto);
+            var product= updateProductDto.Adapt<Product>();
         product.Id= productID;
 
             if(!_productRepository.UpdateProduct(product))
@@ -232,7 +227,7 @@ namespace ApiEcommerce.Controllers
                 return StatusCode(500, ModelState);
             }
             var createdProduct= _productRepository.GetProduct(product.Id);
-            var productDto= _mapper.Map<ProductDto>(createdProduct);
+            var productDto= createdProduct.Adapt<ProductDto>();
 
             return NoContent();
         }

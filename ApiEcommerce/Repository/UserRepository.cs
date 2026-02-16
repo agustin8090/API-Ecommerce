@@ -6,11 +6,10 @@ using System.Text;
 using ApiEcommerce.Models;
 using ApiEcommerce.Models.DTOs;
 using ApiEcommerce.Repository.IRepository;
-using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-
+using Mapster;
 namespace ApiEcommerce.Repository;
 
 public class UserRepository : IUserRepository
@@ -22,14 +21,12 @@ public class UserRepository : IUserRepository
 
     private readonly UserManager<AplicationUser> _userManager;
     private readonly RoleManager<IdentityRole> _roleManager;
-    private readonly IMapper _mapper;
-    public UserRepository(ApplicationDbContext db, IConfiguration configuration, UserManager<AplicationUser> userManager, RoleManager<IdentityRole> roleManager, IMapper mapper)
+    public UserRepository(ApplicationDbContext db, IConfiguration configuration, UserManager<AplicationUser> userManager, RoleManager<IdentityRole> roleManager)
     {
-        _db=db;
-        secretKey= configuration.GetValue<string>("ApiSettings:SecretKey");
-        _userManager=userManager;
-        _roleManager=roleManager;
-        _mapper=mapper;
+        _db = db;
+        secretKey = configuration.GetValue<string>("ApiSettings:SecretKey");
+        _userManager = userManager;
+        _roleManager = roleManager;
     }
    public AplicationUser? GetUser(string  id)
     {
@@ -122,7 +119,7 @@ public class UserRepository : IUserRepository
         return new UserLoginResponseDto()
         {
             Token= handlerToken.WriteToken(token),
-            User= _mapper.Map<UserDataDto>(user),
+            User= user.Adapt<UserDataDto>(),
             Message= "Usuario logueado correctamente"
         };
 
@@ -164,7 +161,7 @@ public class UserRepository : IUserRepository
             await _userManager.AddToRoleAsync(user, userRole);
 
             var createdUser= _db.AplicationUsers.FirstOrDefault(u => u.UserName == createuserdto.Username);
-            return _mapper.Map<UserDataDto>(createdUser);
+            return createdUser.Adapt<UserDataDto>();
         }
         var errors= string.Join(", ", result.Errors.Select(e => e.Description));
         throw new ApplicationException($"No se puedo realizar el registro del usuario. Errores: {errors}");
