@@ -80,15 +80,16 @@ The system is built with **Maintability** in mind:
 🚦 Getting Started
 Clone the repository:
 
-Bash
 git clone https://github.com/agustin8090/API-Ecommerce
+
+
 Spin up the Database (Docker):
 
-Bash
 docker-compose up -d
+
+
 Run the API:
 
-Bash
 dotnet run
 </pre>
 
