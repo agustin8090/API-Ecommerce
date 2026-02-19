@@ -1,15 +1,15 @@
-## E-commerce  RESTful API | Sales and Users Management
+# E-commerce  RESTful API | Sales and Users Management
 Wasup!
 I built this End-to-End project with the goal of implementing the newest Technologies and be able of feel how it is to work with these like the current job market demands.
 
-## 🌟 Overview
+# 🌟 Overview
 This project is scalable Backend solution for an E-commerce platform. Built with .NET 8, it implements modern architectural patterns and industry-standard security protocols.
 
 Unlike standard academic projects, this API focuses on production-ready features such as database containerization, role-based access control, and optimized data mapping.
 
-## 🚀 Key Features
+# 🚀 Key Features
 
-# 👤 Identity & Security
+## 👤 Identity & Security
 
 * **Authentication & Authorization:** Implemented via ASP.NET Core Identity and JWT (JSON Web Tokens).
 
@@ -18,7 +18,7 @@ Unlike standard academic projects, this API focuses on production-ready features
 * **Secure Password Hashing:** Leverages Identity's built-in security providers.
 
 
-# 📦 Product & Inventory Management
+## 📦 Product & Inventory Management
 
 * **Full CRUD Operations:** Comprehensive management for Products and Categories.
 
@@ -27,7 +27,7 @@ Unlike standard academic projects, this API focuses on production-ready features
 * **Stock Control:** Logic for inventory updates and purchase simulations.
 
 
-# 🛠️ Technical Excellence
+## 🛠️ Technical Excellence
 
 * **Clean Architecture:** Strict separation of concerns using the Repository Pattern.
 
@@ -38,7 +38,7 @@ Unlike standard academic projects, this API focuses on production-ready features
 * **Documentation:** Fully documented interactive UI via Swagger/OpenAPI.
 
 
-## 🧩 Tech Stack & Tools
+# 🧩 Tech Stack & Tools
 
 * **Languag:** C# 12
 
@@ -56,7 +56,7 @@ Unlike standard academic projects, this API focuses on production-ready features
 
 
 
-## 🏗️ Architecture & Best Practices
+# 🏗️ Architecture & Best Practices
 The system is built with **Maintability** in mind:
 
 * **Repository Pattern:** Decouples business logic from data access, making the codebase test-ready.
@@ -66,7 +66,7 @@ The system is built with **Maintability** in mind:
 * **Dependency Injection:** Managed via the native .NET IoC container for better resource lifecycle management.
 
 
-## 🚦 How Start?
+# 🚦 How Start?
 
 **Prerequisites:**
 * https://dotnet.microsoft.com/download/dotnet/8.0
@@ -88,9 +88,9 @@ The system is built with **Maintability** in mind:
 * Run the API:
 
  "dotnet run"
- 
 
-## ✉️ Contact
+
+# ✉️ Contact
 I am a Software Engineering student and Data Analyst Intern passionate about building robust software solutions
 
 * **LinkedIn:** https://www.linkedin.com/in/agustin-gonzalez-data/
