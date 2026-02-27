@@ -27,4 +27,9 @@
     <Folder Include="Models\DTOs\Responses\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ApiEcommerce.Application\ApiEcommerce.Application.csproj" />
+    <ProjectReference Include="..\ApiEcommerce.Infrastructure\ApiEcommerce.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
