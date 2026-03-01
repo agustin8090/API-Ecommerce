@@ -1,0 +1,31 @@
+using System;
+using ApiEcommerce.Domain.Models;
+
+namespace ApiEcommerce.Domain.IRepository;
+
+public interface IProductRepository
+{
+ICollection<Product> GetProducts(); 
+ICollection<Product> GetProductsInPages(int pageNumber, int pageSize); 
+int GetTotalProducts(); 
+
+ICollection<Product> GetProductForCategory(int IdCategory);
+
+ICollection<Product> SearchProducts (string searchTerm);
+
+Product? GetProduct(int id);
+
+bool BuyProduct(string name, int cantidad);
+
+bool ProductExists(int id);
+bool ProductExists(string name);
+
+bool CreateProduct(Product product);
+
+bool UpdateProduct(Product product);
+
+bool DeleteProduct(Product product);
+
+bool Save();
+
+}

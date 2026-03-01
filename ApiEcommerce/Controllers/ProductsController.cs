@@ -1,4 +1,6 @@
-using ApiEcommerce.Repository.IRepository;
+using ApiEcommerce.Domain.IRepository;
+using ApiEcommerce.Application.DTOs;
+using ApiEcommerce.Domain.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Mapster;

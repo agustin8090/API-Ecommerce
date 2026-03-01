@@ -1,53 +1,31 @@
-using System.Reflection;
 using System.Text;
 using ApiEcommerce.Constants;
-using ApiEcommerce.Data;
-using ApiEcommerce.Models;
-using ApiEcommerce.Repository;
-using ApiEcommerce.Repository.IRepository;
 using Asp.Versioning;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using ApiEcommerce.Infrastructure;
+using ApiEcommerce.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-var dbConnectionString= builder.Configuration.GetConnectionString("ConexionSql");
+// Add of architecture layers
+builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddApplication();
 
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-  options.UseSqlServer(dbConnectionString)
-  .UseSeeding((context, _) =>
-  {
-    var appContext = (ApplicationDbContext)context;
-    
-    DataSeeder.SeedData(appContext);
-  })
-  
-);builder.Services.AddResponseCaching(Options=>
+
+  //API Configuration
+builder.Services.AddResponseCaching(Options=>
 {
     Options.MaximumBodySize = 1024 * 1024;
     Options.UseCaseSensitivePaths = true;
 });
 
-builder.Services.AddScoped<ICategoryRepository,CategoryRepository>();
-builder.Services.AddScoped<IProductRepository,ProductRepository>();
-builder.Services.AddScoped<IUserRepository,UserRepository>();
- 
- // Registrar configuraciones de Mapster
- ApiEcommerce.Mapping.ProductMappingConfig.RegisterProductMappings();
- ApiEcommerce.Mapping.CategoryMappingConfig.RegisterCategoryMappings();
- ApiEcommerce.Mapping.UserMappingConfig.RegisterUserMappings();
 
-builder.Services.AddIdentity<AplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddDefaultTokenProviders();
 
+// JWT Authentication Configuration
 
 var secretKey=builder.Configuration.GetValue<string>("Apisettings:SecretKey");
 
@@ -202,11 +180,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseCors(PolicyNames.AllowSpecificOrigin);
 app.UseResponseCaching();
-
-
 app.UseAuthentication();
-
 app.UseAuthorization();
 app.MapControllers();
-
 app.Run();

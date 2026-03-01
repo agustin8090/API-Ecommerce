@@ -1,5 +1,6 @@
 using ApiEcommerce.Models.DTOs;
-using ApiEcommerce.Repository.IRepository;
+using ApiEcommerce.Application.Interfaces;
+using ApiEcommerce.Application.DTOs;
 using Asp.Versioning;
 using Mapster;
 using Microsoft.AspNetCore.Authorization;

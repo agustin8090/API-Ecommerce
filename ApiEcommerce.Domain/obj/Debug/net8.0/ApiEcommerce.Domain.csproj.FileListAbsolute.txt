@@ -1,0 +1,13 @@
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Domain\bin\Debug\net8.0\ApiEcommerce.Domain.deps.json
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Domain\bin\Debug\net8.0\ApiEcommerce.Domain.dll
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Domain\bin\Debug\net8.0\ApiEcommerce.Domain.pdb
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Domain\obj\Debug\net8.0\ApiEcommerce.Domain.csproj.AssemblyReference.cache
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Domain\obj\Debug\net8.0\ApiEcommerce.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Domain\obj\Debug\net8.0\ApiEcommerce.Domain.AssemblyInfoInputs.cache
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Domain\obj\Debug\net8.0\ApiEcommerce.Domain.AssemblyInfo.cs
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Domain\obj\Debug\net8.0\ApiEcommerce.Domain.csproj.CoreCompileInputs.cache
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Domain\obj\Debug\net8.0\ApiEcommerce.Domain.sourcelink.json
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Domain\obj\Debug\net8.0\ApiEcommerce.Domain.dll
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Domain\obj\Debug\net8.0\refint\ApiEcommerce.Domain.dll
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Domain\obj\Debug\net8.0\ApiEcommerce.Domain.pdb
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Domain\obj\Debug\net8.0\ref\ApiEcommerce.Domain.dll

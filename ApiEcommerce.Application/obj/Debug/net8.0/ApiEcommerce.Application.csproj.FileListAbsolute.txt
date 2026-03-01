@@ -1,0 +1,16 @@
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Application\bin\Debug\net8.0\ApiEcommerce.Application.deps.json
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Application\bin\Debug\net8.0\ApiEcommerce.Application.dll
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Application\bin\Debug\net8.0\ApiEcommerce.Application.pdb
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Application\bin\Debug\net8.0\ApiEcommerce.Domain.dll
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Application\bin\Debug\net8.0\ApiEcommerce.Domain.pdb
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Application\obj\Debug\net8.0\ApiEcommerce.Application.csproj.AssemblyReference.cache
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Application\obj\Debug\net8.0\ApiEcommerce.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Application\obj\Debug\net8.0\ApiEcommerce.Application.AssemblyInfoInputs.cache
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Application\obj\Debug\net8.0\ApiEcommerce.Application.AssemblyInfo.cs
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Application\obj\Debug\net8.0\ApiEcommerce.Application.csproj.CoreCompileInputs.cache
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Application\obj\Debug\net8.0\ApiEcommerce.Application.sourcelink.json
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Application\obj\Debug\net8.0\ApiEcomm.977E575A.Up2Date
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Application\obj\Debug\net8.0\ApiEcommerce.Application.dll
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Application\obj\Debug\net8.0\refint\ApiEcommerce.Application.dll
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Application\obj\Debug\net8.0\ApiEcommerce.Application.pdb
+C:\Users\agust\Desktop\dotnet\ApiEcommerce\ApiEcommerce.Application\obj\Debug\net8.0\ref\ApiEcommerce.Application.dll
