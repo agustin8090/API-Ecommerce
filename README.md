@@ -36,7 +36,7 @@ The project is divided into four main layers to ensure separation of concerns an
 
 1. **Clone the repository:**
 ```bash  
- git clone [https://github.com/Agustin8090/ApiEcommerce.git](https://github.com/Agustin8090/ApiEcommerce.git)
+ git clone https://github.com/Agustin8090/ApiEcommerce.git
 ```
 
 2. **Update Connection String:**
