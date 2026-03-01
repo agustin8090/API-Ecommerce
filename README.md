@@ -35,9 +35,9 @@ The project is divided into four main layers to ensure separation of concerns an
 ## 🚥 Get Started
 
 1. **Clone the repository:**
-<bash>
-   git clone [https://github.com/Agustin8090/ApiEcommerce.git](https://github.com/Agustin8090/ApiEcommerce.git)
-<bash>
+```bash  
+ git clone [https://github.com/Agustin8090/ApiEcommerce.git](https://github.com/Agustin8090/ApiEcommerce.git)
+```
 
 2. **Update Connection String:**
 
@@ -46,12 +46,12 @@ Update Connection String: Modify appsettings.json in the Web API project with yo
 
 3. **Run Migrations:**
 
-<bash>
+```bash  
 dotnet ef database update --project ApiEcommerce.Infrastructure --startup-project ApiEcommerce
-<bash>
+```
 
 4. **Run the App:**
 
-<bash>
+```bash
 dotnet run --project ApiEcommerce.Web
-<bash>
+```
